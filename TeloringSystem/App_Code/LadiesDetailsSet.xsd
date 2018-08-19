@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LadiesDetailsSet" targetNamespace="http://tempuri.org/LadiesDetailsSet.xsd" xmlns:mstns="http://tempuri.org/LadiesDetailsSet.xsd" xmlns="http://tempuri.org/LadiesDetailsSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LadiesDetailsTableAdapter" GeneratorDataComponentClassName="LadiesDetailsTableAdapter" Name="LadiesDetails" UserDataComponentName="LadiesDetailsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT CustId, RegId, CustName, MobNo, DressType, DressCount, DressCost, RemCost FROM LadiesDetails where RemId=Session["Id"]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CustId" DataSetColumn="CustId" />
+              <Mapping SourceColumn="RegId" DataSetColumn="RegId" />
+              <Mapping SourceColumn="CustName" DataSetColumn="CustName" />
+              <Mapping SourceColumn="MobNo" DataSetColumn="MobNo" />
+              <Mapping SourceColumn="DressType" DataSetColumn="DressType" />
+              <Mapping SourceColumn="DressCount" DataSetColumn="DressCount" />
+              <Mapping SourceColumn="DressCost" DataSetColumn="DressCost" />
+              <Mapping SourceColumn="RemCost" DataSetColumn="RemCost" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="LadiesDetailsSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="LadiesDetailsSet" msprop:Generator_DataSetName="LadiesDetailsSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="LadiesDetails" msprop:Generator_UserTableName="LadiesDetails" msprop:Generator_RowDeletedName="LadiesDetailsRowDeleted" msprop:Generator_TableClassName="LadiesDetailsDataTable" msprop:Generator_RowChangedName="LadiesDetailsRowChanged" msprop:Generator_RowClassName="LadiesDetailsRow" msprop:Generator_RowChangingName="LadiesDetailsRowChanging" msprop:Generator_RowEvArgName="LadiesDetailsRowChangeEvent" msprop:Generator_RowEvHandlerName="LadiesDetailsRowChangeEventHandler" msprop:Generator_TablePropName="LadiesDetails" msprop:Generator_TableVarName="tableLadiesDetails" msprop:Generator_RowDeletingName="LadiesDetailsRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CustId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="CustId" msprop:Generator_ColumnPropNameInRow="CustId" msprop:Generator_ColumnVarNameInTable="columnCustId" msprop:Generator_ColumnPropNameInTable="CustIdColumn" type="xs:decimal" />
+              <xs:element name="RegId" msprop:Generator_UserColumnName="RegId" msprop:Generator_ColumnPropNameInRow="RegId" msprop:Generator_ColumnVarNameInTable="columnRegId" msprop:Generator_ColumnPropNameInTable="RegIdColumn" type="xs:decimal" />
+              <xs:element name="CustName" msprop:Generator_UserColumnName="CustName" msprop:Generator_ColumnPropNameInRow="CustName" msprop:Generator_ColumnVarNameInTable="columnCustName" msprop:Generator_ColumnPropNameInTable="CustNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MobNo" msprop:Generator_UserColumnName="MobNo" msprop:Generator_ColumnPropNameInRow="MobNo" msprop:Generator_ColumnVarNameInTable="columnMobNo" msprop:Generator_ColumnPropNameInTable="MobNoColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DressType" msprop:Generator_UserColumnName="DressType" msprop:Generator_ColumnPropNameInRow="DressType" msprop:Generator_ColumnVarNameInTable="columnDressType" msprop:Generator_ColumnPropNameInTable="DressTypeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DressCount" msprop:Generator_UserColumnName="DressCount" msprop:Generator_ColumnPropNameInRow="DressCount" msprop:Generator_ColumnVarNameInTable="columnDressCount" msprop:Generator_ColumnPropNameInTable="DressCountColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DressCost" msprop:Generator_UserColumnName="DressCost" msprop:Generator_ColumnPropNameInRow="DressCost" msprop:Generator_ColumnVarNameInTable="columnDressCost" msprop:Generator_ColumnPropNameInTable="DressCostColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RemCost" msprop:Generator_UserColumnName="RemCost" msprop:Generator_ColumnPropNameInRow="RemCost" msprop:Generator_ColumnVarNameInTable="columnRemCost" msprop:Generator_ColumnPropNameInTable="RemCostColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:LadiesDetails" />
+      <xs:field xpath="mstns:CustId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

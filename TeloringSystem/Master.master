@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master.master.cs" Inherits="Master" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+</head>
+<asp:contentplaceholder id="head" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+</asp:contentplaceholder>
+<body>
+    <form id="form1" runat="server">
+    <div class="wrapper">
+        <asp:Panel runat="server" BorderColor="WhiteSmoke" BorderWidth="2px"
+            BackImageUrl="~/images/Green/green6.jpg" Height="100px" Width="960px">
+            <asp:Image ID="Image2" runat="server" Height="92px" ImageUrl="~/images/Logo.gif"
+                Width="486px" />
+        </asp:Panel>
+    </div>
+    <asp:ContentPlaceHolder ID="toper" runat="server">
+        <div class="topper" style="width: 960px;padding-top:5px;padding-bottom:5px">
+            <asp:Button ID="Exits" runat="server" Font-Bold="True" Font-Size="12pt" Font-Underline="True"
+                ForeColor="White" Text="Logout" OnClick="logout_Click" Width="74px" BackColor="Red" BorderColor="#3366FF" Font-Names="Arial"></asp:Button>
+        </div>
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="menucontent" runat="server">
+        <div class="menu">
+            <asp:Panel runat="server" Height="105px" ForeColor="BurlyWood"
+                BackImageUrl="~/images/Green/green4.jpg">
+                <ul>
+                    <li>
+                        <asp:HyperLink ID="CLogin" NavigateUrl="~/Login.aspx" runat="server" Font-Bold="True"
+                            Font-Size="15pt" ForeColor="#00FFCC">Login/Register</asp:HyperLink>
+                    </li>
+                </ul>
+            </asp:Panel>
+        </div>
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="Header" runat="server">
+        <div class="ImageUrl">
+            <asp:ScriptManager ID="ScriptManager1" runat="server">
+            </asp:ScriptManager>
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                <ContentTemplate>
+                    <asp:Timer ID="Timer1" runat="server" Interval="2000" OnTick="Timer1_Tick">
+                    </asp:Timer>
+                    <asp:Image ID="Image1" runat="server" Width="938px" Height="350px" BorderColor="Black"
+                        BorderWidth="3px" />
+                </ContentTemplate>
+            </asp:UpdatePanel>
+        </div>
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="Middle" runat="server">
+        <div class="panels-container">
+            <div class="panel-wrapper">
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+    </asp:ContentPlaceHolder>
+    </div>
+    <asp:ContentPlaceHolder ID="Footer" runat="server">
+        <div class="footer">
+            <div class="copy-rights" style="color: #FFFFFF; font-size: 12px">
+                Copyright (c) Untitled. Design by <a href="www.test.com" style="color: #FFFFFF; font-size: 12px">www.test.com</a></div>
+        </div>
+    </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

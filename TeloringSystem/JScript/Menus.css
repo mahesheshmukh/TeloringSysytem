@@ -1,0 +1,29 @@
+﻿#menu, #menu ul    {
+                    
+list-style:none;
+padding:0;
+margin:0;
+}
+ 
+#menu li:hover ul, #menu li.over ul 
+{
+display:block;
+} 
+#menu li:hover ul ul, #menu li.over ul ul 
+{ 
+display:none;
+} 
+
+
+ 
+#menu ul li:hover ul, #menu ul li.over ul 
+{ 
+display:block;
+} 
+
+ 
+#menu a:hover 
+{
+background-color:#5798B4;
+color:#fff;
+}
